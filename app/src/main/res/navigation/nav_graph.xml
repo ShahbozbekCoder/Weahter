@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sunnyScreenFragment">
+
+    <fragment
+        android:id="@+id/sunnyScreenFragment"
+        android:name="com.example.weather.ui.fragment.sunny.SunnyScreenFragment"
+        android:label="fragment_sunny_screen"
+        tools:layout="@layout/fragment_sunny_screen" />
+    <fragment
+        android:id="@+id/rainScreenFragment"
+        android:name="com.example.weather.ui.fragment.RainScreenFragment"
+        android:label="fragment_rain_screen"
+        tools:layout="@layout/fragment_rain_screen" />
+    <fragment
+        android:id="@+id/cloudScreenFragment"
+        android:name="com.example.weather.ui.fragment.CloudScreenFragment"
+        android:label="fragment_cloud_screen"
+        tools:layout="@layout/fragment_cloud_screen" />
+    <fragment
+        android:id="@+id/snowScreenFragment"
+        android:name="com.example.weather.ui.fragment.SnowScreenFragment"
+        android:label="fragment_snow_screen"
+        tools:layout="@layout/fragment_snow_screen" />
+</navigation>
