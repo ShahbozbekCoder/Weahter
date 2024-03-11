@@ -11,7 +11,7 @@ interface WeatherApiInterface {
 
     @GET("weather?q=city&appid=$API_ID")
     suspend fun getWeatherData(
-        @Query("city") city:String
+        @Query("city") city: String
     ): Response<WeatherApiData>
 
 }

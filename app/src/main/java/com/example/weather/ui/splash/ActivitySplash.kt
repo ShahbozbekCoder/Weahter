@@ -7,7 +7,9 @@ import android.os.Handler
 import android.os.Looper
 import com.example.weather.ui.MainActivity
 import com.example.weather.databinding.ActivitySplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ActivitySplash : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding

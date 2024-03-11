@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.weather.databinding.FragmentCloudScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 //10b8cad8eaba760fafab0969417765e5
 class CloudScreenFragment : Fragment() {
 

@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.weather.R
 import com.example.weather.databinding.FragmentRainScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RainScreenFragment : Fragment() {
     
     private var _binding: FragmentRainScreenBinding? = null
