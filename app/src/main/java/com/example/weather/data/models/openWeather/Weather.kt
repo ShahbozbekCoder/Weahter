@@ -1,4 +1,4 @@
-package com.example.weather.data.models
+package com.example.weather.data.models.openWeather
 
 data class Weather(
     val description: String,
