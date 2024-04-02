@@ -16,30 +16,29 @@ private const val TAG = "MyTag"
 //bb6e6c28b3434bcc8f192036243103
 
 @HiltViewModel
-class SunnyScreenViewModel @Inject constructor(private val repository: Repository): ViewModel() {
+class SunnyScreenViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
-    private var _weatherData = MutableLiveData<DataWeather>()
-    val weatherData:LiveData<DataWeather> get() = _weatherData
+    private var _weatherData = MutableLiveData<WeatherApiData>()
+    val weatherData: LiveData<WeatherApiData> get() = _weatherData
 
     private var _error = MutableLiveData<String>()
-    val error:LiveData<String> get() = _error
+    val error: LiveData<String> get() = _error
 
-    fun getWeatherData(city:String) = viewModelScope.launch {
-        try {
-            repository.getWeather(city).let { response ->
-                if (response.isSuccessful) {
-                    response.body()?.let {
-                        _weatherData.value = it
-                    }
-                    Log.d(TAG, "getWeatherData: ${response.body()}")
-                } else {
-                        _error.value = "Xabarni olishda xatolik"
-                }
-            }
-        }
-        catch(e:Exception) {
-            Log.d(TAG, "getWeatherData: ${e.message}")
-        }
-    }
+//    fun getWeatherData(city: String, appid: String, units: String) = viewModelScope.launch {
+//        try {
+//            repository.getWeather(city, appid, units).let { response ->
+//                if (response.isSuccessful) {
+//                    response.body()?.let {
+//                        _weatherData.value = it
+//                    }
+//                    Log.d(TAG, "getWeatherData: ${response.body()}")
+//                } else {
+//                    _error.value = "Xabarni olishda xatolik"
+//                }
+//            }
+//        } catch (e: Exception) {
+//            Log.d(TAG, "getWeatherData: ${e.message}")
+//        }
+//    }
 
 }
